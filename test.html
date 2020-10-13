@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="city"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        const cityEl = $(".city");
+
+        const apiUrl =
+        "https://api.openweathermap.org/data/2.5/forecast?q=Seattle&appid=2a79fc5901f91718d12fb3f9ffdc31cd";
+
+        $.ajax({ url: apiUrl, method: "GET" }).then(function (response) {
+        console.log(response);
+        cityEl.text(response.name);
+        });
+
+    </script>
+</body>
+</html>

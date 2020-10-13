@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   
+    <div class="container">
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Weather Dashboard</h1>
+          <p class="lead"></p>
+        </div>
+      </div>
+      <div class="float-left">
+      <div class="row">
+          <div class="col-sm-12">
+              <br>
+
+              <div class="card">
+                  <div class="card-header">
+                      <i class="fa fa-list-alt"></i> Select a City</strong>
+
+                  </div>                  
+              </div>
+              
+              <form role="form">
+                
+                <div class="form-group">
+                  <label for="search">City:</label>
+                  <button id="run-search" type="button" class="btn btn-primary btn-sm">Go!</button>
+                  <button id="clear-search" type="button" class="btn btn-primary btn-sm">Clear</button>
+                  <input type="text" class="form-control" id="search-term">
+                </div>      
+                <div class="buttons-view"></div>         
+          </div>
+          </div>
+      </div>
+<br>
+ <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>
+            <i class="fa fa-table"></i> Weather</strong>
+        </div>        
+        <div class="card-body" id="weather">
+        </div>
+      </div>
+    </div>     
+  </div>
+
+ 
+        <br> <br>
+         <div class="card-header">
+          <strong>
+            <i class="fa fa-table"></i> Five day forcast</strong>
+        </div>
+
+         <div class="card-body" id="fiveDay">
+          
+        </div> 
+
+        
+          <div class="row">
+            <div class="col-md-1 margin"></div>
+            <div class="col-md-2"><img class="day-1-icon"></div>
+            <div class="col-md-2"><img class="day-2-icon"></div>
+            <div class="col-md-2"><img class="day-3-icon"></div>
+            <div class="col-md-2"><img class="day-4-icon"></div>
+            <div class="col-md-2"><img class="day-5-icon"></div>
+            <div class="col-md-1"></div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-1 margin"></div>
+              <div class="col-md-2 day1"></div>
+              <div class="col-md-2 day2"></div>
+              <div class="col-md-2 day3"></div>
+              <div class="col-md-2 day4"></div>
+              <div class="col-md-2 day5"></div>
+              <div class="col-md-1"></div>            
+          </div>
+        
+        
+    
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
