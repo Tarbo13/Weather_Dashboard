@@ -15,8 +15,8 @@ I then used variables to store the date from the response.  I was able to single
 
 ### Screen Shots
 
-![Initial Page](https://user-images.githubusercontent.com/68627417/95945268-eef59d80-0d9e-11eb-9f8b-b3b3fe28d65d.png)
+![Initial Page](https://user-images.githubusercontent.com/68627417/95945884-48aa9780-0da0-11eb-8fc5-f0dbe917e2ca.png)
 
 <br>
 
-![Weather Displayed](https://user-images.githubusercontent.com/68627417/95945335-12204d00-0d9f-11eb-915f-42619eb353a1.png)
+![Weather Data Displayed](https://user-images.githubusercontent.com/68627417/95945957-7099fb00-0da0-11eb-9317-bde60412fdea.png)
