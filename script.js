@@ -1,6 +1,6 @@
-$(document).ready(function(){
-    
-    let serchData = $("search-term");
+
+       $(document).ready(function(){
+    let serchData = $("#search-term");
     let listOfCities = [];
     let city
     let APIKey = "2a79fc5901f91718d12fb3f9ffdc31cd";
@@ -21,23 +21,24 @@ for (var i = 0; i < listOfCities.length; i++) {
     $(".buttons-view").prepend(a);
 }
 }  
+// function to display the current weather
     function displayWeather() {
         
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey + "&units=imperial";
-
+// ajax call to openWeatherMap API for current conditions
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
             console.log(response);
             $("#weather").html("");
-
+//crating div to store weather info
             var newDiv = $("<div class='cityWeather'>");
             newDiv.html("<h2>Current Weather</h2><br>");
             serchData.prepend(newDiv);
             console.log(serchData);
 
-
+//create weather line item elements
             var cityName = response.name;
             var pOne = $("<p>").html("<h4>" + cityName + "</h4>");
             newDiv.append(pOne);
@@ -63,7 +64,7 @@ for (var i = 0; i < listOfCities.length; i++) {
             var lat = response.coord.lat;
 
             var uvIndexUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
-
+// ajax call for UV info
             $.ajax({
                 url: uvIndexUrl,
                 method: "GET"
@@ -76,10 +77,11 @@ for (var i = 0; i < listOfCities.length; i++) {
             })
                         
             $("#weather").prepend(newDiv);
-           
+// pusing serch term to array
             if (listOfCities.includes(response.name) === false){
                 listOfCities.push(response.name)
             }
+// call functions to display weather data 
             renderButtons();
             saveCities();
             display5day();
@@ -89,7 +91,7 @@ for (var i = 0; i < listOfCities.length; i++) {
 
     function display5day() {
         var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
-
+// ajax call for five day forcast info
         $.ajax({
             url: forcastURL,
             method: "GET"
@@ -136,7 +138,7 @@ for (var i = 0; i < listOfCities.length; i++) {
 
         })
     }
-
+// click handler for search button, takes in serch term data
     $("#run-search").on("click", function (){
         city = $("#search-term").val();
         // city.push(listOfCities);
@@ -145,21 +147,22 @@ for (var i = 0; i < listOfCities.length; i++) {
         console.log(city);
       
     })
-
+// click handler for the saved city buttons 
     $(document).on("click", ".city-btn", function(){
         city = $(this).attr("data-name");
         displayWeather();
         display5day();
+        
     })
-
+// click handler for the clear search button,  clear local storage
     $("#clear-search").on("click", function(){
         localStorage.clear("cities");
         listOfCities = [];
         $(".buttons-view").empty();
         location.reload();
     })
-  
-   
+ 
+ // store city names in arry to local storage  
         if (localStorage.getItem("cities") !== null){
             var savedCity = localStorage.getItem("cities");
             var pushCities = JSON.parse(savedCity);
@@ -167,6 +170,8 @@ for (var i = 0; i < listOfCities.length; i++) {
             console.log(listOfCities);
 
         }
+
+// render buttons from search input
         renderButtons();
 
 })
