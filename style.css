@@ -5,3 +5,26 @@ button {
 .margin {
     margin-bottom: 50px;
 }
+.jumbotron {  
+background: linear-gradient(to bottom,  #2f71bd 23%,#3075c4 23%,#2989d8 32%,#2989d8 32%,#2989d8 49%,#207cca 70%,#7db9e8 83%,#7db9e8 83%,#7db9e8 87%);
+}
+.cityWeather {
+    border: 2px solid black;
+    outline: #1d1092 solid 10px;
+    margin: auto;  
+    padding: 20px;
+    text-align: center;    
+}
+.border {
+    border: 2px solid black;
+    outline: #1d1092 solid 10px;
+    margin: auto;  
+    padding: 20px;
+    text-align: center;    
+    margin-bottom: 50px;
+}
+.day-1-icon {
+    background-color: #7db9e8;
+    margin: auto;
+    width: 50%;
+}

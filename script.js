@@ -127,13 +127,15 @@ for (var i = 0; i < listOfCities.length; i++) {
             $(".day-3-icon").attr("src", day3icon);
             $(".day-4-icon").attr("src", day4icon);
             $(".day-5-icon").attr("src", day5icon);
+
+            
             
 
-            $(".day1").html("<br/>" + "<b>" + moment(day1date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day1temp + "F </br>" + "Humidity:" + day1hum + "%");
-            $(".day2").html("<br/>" + "<b>" + moment(day2date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day2temp + "F </br>" + "Humidity:" + day2hum + "%");
-            $(".day3").html("<br/>" + "<b>" + moment(day3date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day3temp + "F </br>" + "Humidity:" + day3hum + "%");
-            $(".day4").html("<br/>" + "<b>" + moment(day4date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day4temp + "F </br>" + "Humidity:" + day4hum + "%");
-            $(".day5").html("<br/>" + "<b>" + moment(day5date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day5temp + "F </br>" + "Humidity:" + day5hum + "%");
+            $(".day1").html("<p class=border>" + "<br/>" + "<b>" + moment(day1date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day1temp + "F </br>" + "Humidity:" + day1hum + "%");            
+            $(".day2").html("<p class=border>" + "<br/>" + "<b>" + moment(day2date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day2temp + "F </br>" + "Humidity:" + day2hum + "%");
+            $(".day3").html("<p class=border>" +"<br/>" + "<b>" + moment(day3date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day3temp + "F </br>" + "Humidity:" + day3hum + "%");
+            $(".day4").html("<p class=border>" +"<br/>" + "<b>" + moment(day4date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day4temp + "F </br>" + "Humidity:" + day4hum + "%");
+            $(".day5").html("<p class=border>" +"<br/>" + "<b>" + moment(day5date).format("ddd, MMM Do") + "</b>" + "</br>" + "Temp:" + day5temp + "F </br>" + "Humidity:" + day5hum + "%");
           
 
         })
@@ -141,7 +143,7 @@ for (var i = 0; i < listOfCities.length; i++) {
 // click handler for search button, takes in serch term data
     $("#run-search").on("click", function (){
         city = $("#search-term").val();
-        // city.push(listOfCities);
+        // city.push(listOfCities);       
         display5day();
         displayWeather();
         console.log(city);
